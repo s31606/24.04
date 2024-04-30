@@ -1,9 +1,24 @@
 public class Rectangle implements Figure{
-    public double getPerimeter() {
-        return 0;
+    private double sideA;
+    private double sideB;
+
+    public Rectangle(double sideA, double sideB) {
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
 
+    @Override
+    public double getPerimeter() {
+        return 2 * sideA + 2 * sideB;
+    }
+
+    @Override
     public double getArea() {
-        return 0;
+        return sideA * sideB;
+    }
+
+    @Override
+    public String getType() {
+        return "Rectangle";
     }
 }
